@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 function App() {
   return (
     <div className="app">
-      <Header home>hjælpDeÆldre</Header>
+      <Header home />
       <main>
         COVID-19 Symptom Tracker
       </main>

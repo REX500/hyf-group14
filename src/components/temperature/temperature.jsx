@@ -13,7 +13,7 @@ import TextField from '@material-ui/core/TextField';
 function Temperature() {
   return (
     <div className="app">
-      <Header home>hjælpDeÆldre</Header>
+      <Header home />
       {/* your code should start here :) */}
       {/**
        * how to use material-ui links are bellow
