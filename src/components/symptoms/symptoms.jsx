@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../App.css";
+import "./style.css";
 
 import Button from "@material-ui/core/Button";
 import Radio from "@material-ui/core/Radio";
@@ -35,7 +35,7 @@ class Symptoms extends Component {
     return (
       <FormControl component="fieldset" name="firstPage">
         {this.state.isFlag ? (
-          <div>
+          <div className="wraper">
             <h2>Har du Hoste?</h2>
             <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
               <FormControlLabel value="Ja" control={<Radio />} label="Ja" />
@@ -57,7 +57,7 @@ class Symptoms extends Component {
             </footer>
           </div>
         ) : (
-          <div>
+          <div className="wraper">
             <h2>Har du Fiber?</h2>
             <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
               <FormControlLabel value="Ja" control={<Radio />} label="Ja" />
