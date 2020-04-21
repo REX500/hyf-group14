@@ -1,49 +1,83 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./style.css";
 
-// components
-import Header from './components/dumb/header/header';
-
-// material
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
 
 class Symptoms extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      firstPage: true,
-      secondPage: false
+      value: "Nej",
+      isFirstPage: true,
+      isFlag: true,
     };
+    this.onRadioChange = this.onRadioChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  onRadioChange = (e) => {
+    this.setState({
+      value: e.target.value,
+      isFirstPage: e.target.value === "Nej" ? true : false,
+    });
+  };
+
+  handleClick = () => {
+    this.setState({ isFlag: this.state.isFirstPage });
+    console.log(this.state);
+  };
 
   render() {
     return (
-      <div className="app">
-        <Header home />
-        {/* your code should start here :) */}
-        {/**
-         * how to use material-ui links are bellow
-         * - button: https://material-ui.com/components/buttons/
-         */}
-         {/* 
-          tips:
-            - you will have to change between 2 views in this case
-            - one of them will ask the first question
-            - other will ask the second
-            - I recommend, to keep things simple, having all that logic
-              inside this component. You can change the views using this.state.
-              So when the user clicks Ja or Nej and then on next button it should
-              set the state of firstPage to false and secondPage to true.
-              I also added examples in line 40/43 on where to show elements for each page
-         */}
-         {this.state.firstPage && (
-           <p>This is the first page</p>
-         )}
-         {this.state.secondPage && (
-           <p>This is the second page</p>
-         )}
-      </div>
+      <FormControl component="fieldset" name="firstPage">
+        {this.state.isFlag ? (
+          <div className="wraper">
+            <h2>Har du Hoste?</h2>
+            <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
+              <FormControlLabel value="Ja" control={<Radio />} label="Ja" />
+              <FormControlLabel value="Nej" control={<Radio />} label="Nej" />
+            </RadioGroup>
+            <footer>
+              <br></br>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => {
+                  this.handleClick();
+                }}
+              >
+                {this.state.isFirstPage
+                  ? "Ikke at bekymre sig"
+                  : "Gå til næste"}
+              </Button>
+            </footer>
+          </div>
+        ) : (
+          <div className="wraper">
+            <h2>Har du Fiber?</h2>
+            <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
+              <FormControlLabel value="Ja" control={<Radio />} label="Ja" />
+              <FormControlLabel value="Nej" control={<Radio />} label="Nej" />
+            </RadioGroup>
+            <footer>
+            <br></br>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => {
+                  this.handleClick();
+                }}
+              >
+                Færdig
+              </Button>
+            </footer>
+          </div>
+        )}
+      </FormControl>
     );
   }
 }
