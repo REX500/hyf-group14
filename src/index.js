@@ -9,6 +9,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
 // toast/feedbkac/snack - pop ups
 import { SnackbarProvider } from "notistack";
+import Symptoms from "./components/symptoms/symptoms";
 
 const theme = createMuiTheme({
   palette: {
@@ -21,6 +22,7 @@ ReactDOM.render(
     <MuiThemeProvider theme={theme}>
       <SnackbarProvider maxSnack={3}>
         <App />
+        <Symptoms/>
       </SnackbarProvider>
     </MuiThemeProvider>
   </React.StrictMode>,
