@@ -10,7 +10,6 @@ import FormControl from "@material-ui/core/FormControl";
 class Symptoms extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       value: "Nej",
       isFirstPage: true,
@@ -36,13 +35,14 @@ class Symptoms extends Component {
     return (
       <FormControl component="fieldset" name="firstPage">
         {this.state.isFlag ? (
-          <div className="app">
+          <div>
             <h2>Har du Hoste?</h2>
             <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
               <FormControlLabel value="Ja" control={<Radio />} label="Ja" />
               <FormControlLabel value="Nej" control={<Radio />} label="Nej" />
             </RadioGroup>
             <footer>
+              <br></br>
               <Button
                 variant="contained"
                 color="secondary"
@@ -57,13 +57,14 @@ class Symptoms extends Component {
             </footer>
           </div>
         ) : (
-          <div className="app">
+          <div>
             <h2>Har du Fiber?</h2>
             <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
               <FormControlLabel value="Ja" control={<Radio />} label="Ja" />
               <FormControlLabel value="Nej" control={<Radio />} label="Nej" />
             </RadioGroup>
             <footer>
+            <br></br>
               <Button
                 variant="contained"
                 color="secondary"
