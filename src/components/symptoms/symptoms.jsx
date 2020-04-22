@@ -69,7 +69,7 @@ class Symptoms extends Component {
             </RadioGroup>
             <footer>
               <Button variant="contained" color="secondary" onClick={onClick}>
-                Færdig
+              Gå til næste 
               </Button>
             </footer>
           </div>

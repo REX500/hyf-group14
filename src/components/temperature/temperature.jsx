@@ -1,27 +1,56 @@
-import React from 'react';
-import './App.css';
-
-// components
-import Header from './components/dumb/header/header';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
 // material
-import Button from '@material-ui/core/Button';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
 
-function Temperature() {
-  return (
-    <div className="app">
-      <Header home />
-      {/* your code should start here :) */}
-      {/**
-       * how to use material-ui links are bellow
-       * - radio button: https://material-ui.com/components/radio-buttons/
-       * - input field https://material-ui.com/components/text-fields/
-       */}
-    </div>
-  );
+
+class Temperature extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: "Under 38°C"
+    };
+    this.onRadioChange = this.onRadioChange.bind(this);
+  }
+
+  onRadioChange = (e) => {
+    this.setState({
+      value: e.target.value,
+    });
+  };
+  render() {
+    const { onClick } = this.props;
+    return (
+      <FormControl component="fieldset" >
+          <div className="wraper">
+            <h2>Temperatur!</h2>
+            <RadioGroup value={this.state.value} onChange={this.onRadioChange}>
+              <FormControlLabel value="Under 38°C" control={<Radio />} label="Under 38°C" />
+              <FormControlLabel value="39°C" control={<Radio />} label="39°C" />
+              <FormControlLabel value="40°C" control={<Radio />} label="40°C" />
+              <FormControlLabel value="41°C" control={<Radio />} label="41°C" />
+              <FormControlLabel value="42°C" control={<Radio />} label="42°C" />
+              <FormControlLabel value="Above 42°C" control={<Radio />} label="Over 42°" />
+            </RadioGroup>
+            <Button variant="contained" color="secondary" onClick={onClick} >
+                Færdig
+              </Button>
+          </div>
+        
+      </FormControl>
+    );
+  }
 }
+
+Temperature.propTypes = {
+  onClick: PropTypes.func,
+};
 
 export default Temperature;
