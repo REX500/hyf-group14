@@ -48,8 +48,8 @@ In root folder of the project run
 
 * **Mahie Akhtar** - *Initial work* - [mahieakhtar](https://github.com/mahieakhtar)
 * **Pallabi Ghosh** - *Initial work* - [Pallabi-ghosh](https://github.com/Pallabi-ghosh)
-* **Ghofrane Ben Hmaid** - *Initial work* - [mahieakhtar](https://github.com/mahieakhtar)
-* **Mohammed El Shawa** - *Initial work* - [mahieakhtar](https://github.com/mahieakhtar)
+* **Ghofrane Ben Hmaid** - *Initial work* - [mahieakhtar](https://github.com/benhmaid)
+* **Mohammed El Shawa** - *Initial work* - [mahieakhtar](https://github.com/m-elshawa)
 * **Filip Malek** - *Initial work* - [REX500](https://github.com/REX500)
 
 ## License
