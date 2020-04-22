@@ -23,11 +23,12 @@ function App() {
     <div className="app">
       <Header home={currentPage === 'login'} />
 
-      {currentPage === 'login' && (
+      {currentPage === 'symptoms' && (
         <Login onClick={() => setCurrentPage('symptoms')} />
       )}
-      {currentPage === 'symptoms' && (
+      {currentPage === 'login' && (
         <Symptoms onClick={() =>  setCurrentPage('temperature')}/>
+        // <Test />
       )}
       {currentPage === 'temperature' && (
         <Temperature onClick={() => setCurrentPage('final')} />
