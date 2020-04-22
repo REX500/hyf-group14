@@ -13,7 +13,7 @@ function Login({onClick}) {
       <main>COVID-19 Symptom Tracker</main>
       <footer>
         <Button variant="contained" color="secondary" onClick={onClick}>
-          Log In
+          Log På 
         </Button>
       </footer>
     </div>
