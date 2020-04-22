@@ -10,7 +10,7 @@ import './style.css';
 const Final = ({ onClick }) => {
   return (
     <div className="wrapper">
-      <h2>Alle Færdig!</h2>
+      <h2>Tak!</h2>
       <Button variant="contained" color="secondary" onClick={onClick}>
         Tilbage
       </Button>

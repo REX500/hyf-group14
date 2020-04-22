@@ -1,69 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HYF - Group 14 hackaton app
 
-## Available Scripts
+![](animation.gif)
 
-In the project directory, you can run:
+During the COVID-19 situation, Hack Your Future has started a hackaton focused on coming up with solutions using programming
+that would help people in this pandemic state. Group 14 decided to focus on the elderly population with an app that tracks
+symptoms.
 
-### `yarn start`
+## Live preview
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can access live preview on the [link](https://hyf-group14.herokuapp.com/). *Please keep in mind that the app was designed mobile fist and desktop view wasn't inslucded in this MVP.*
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Prerequisites
 
-### `yarn test`
+Make sure you have these to make the app run:
+* Have latest Node version installed: https://nodejs.org/en/
+* Have react installed
+* Have npm or yarn installed
+* Have github installed and configured
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started/ Installing
 
-### `yarn build`
+Clone the repo to your local machine.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In root folder of the project run
+```
+ yarn or npm install
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Running the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the server
+* In the root folder run *yarn build* or *npm run build* - this will create a minified build of the application
+* Once the build is complete, whilst staying in the root folder, run *yarn start* or *npm start*
+* Navigate to _localhost:8080_ and enjoy!
 
-### `yarn eject`
+### Running the development environment
+* In the root run *yarn dev* or *npm run dev*
+* Navigate to _localhost:3000_ and enjoy
+* Every change you make in source code will trigger a refresh in the browser tab
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Built With
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [React](https://reactjs.org/) - Framework used
+* [CRA - Create React App](https://github.com/facebook/create-react-app) - Initialization and webpack config
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Authors
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* **Mahie Akhtar** - *Initial work* - [mahieakhtar](https://github.com/mahieakhtar)
+* **Pallabi Ghosh** - *Initial work* - [Pallabi-ghosh](https://github.com/Pallabi-ghosh)
+* **Ghofrane Ben Hmaid** - *Initial work* - [mahieakhtar](https://github.com/mahieakhtar)
+* **Mohammed El Shawa** - *Initial work* - [mahieakhtar](https://github.com/mahieakhtar)
+* **Filip Malek** - *Initial work* - [REX500](https://github.com/REX500)
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# hyf-group14
+* Hat tip to Chris Achard for making an good but someplaces outdated Egghead tutorial @https://egghead.io/courses/build-a-react-native-application-for-ios-and-android-from-start-to-finish
