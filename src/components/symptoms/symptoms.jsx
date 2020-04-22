@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./style.css";
 
 import Button from "@material-ui/core/Button";
@@ -10,11 +12,13 @@ import FormControl from "@material-ui/core/FormControl";
 class Symptoms extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       value: "Nej",
       isFirstPage: true,
       isFlag: true,
     };
+
     this.onRadioChange = this.onRadioChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -28,10 +32,11 @@ class Symptoms extends Component {
 
   handleClick = () => {
     this.setState({ isFlag: this.state.isFirstPage });
-    console.log(this.state);
   };
 
   render() {
+    const { onClick } = this.props;
+
     return (
       <FormControl component="fieldset" name="firstPage">
         {this.state.isFlag ? (
@@ -42,7 +47,6 @@ class Symptoms extends Component {
               <FormControlLabel value="Nej" control={<Radio />} label="Nej" />
             </RadioGroup>
             <footer>
-              <br></br>
               <Button
                 variant="contained"
                 color="secondary"
@@ -64,14 +68,7 @@ class Symptoms extends Component {
               <FormControlLabel value="Nej" control={<Radio />} label="Nej" />
             </RadioGroup>
             <footer>
-            <br></br>
-              <Button
-                variant="contained"
-                color="secondary"
-                onClick={() => {
-                  this.handleClick();
-                }}
-              >
+              <Button variant="contained" color="secondary" onClick={onClick}>
                 Færdig
               </Button>
             </footer>
@@ -81,5 +78,9 @@ class Symptoms extends Component {
     );
   }
 }
+
+Symptoms.propTypes = {
+  onClick: PropTypes.func,
+};
 
 export default Symptoms;

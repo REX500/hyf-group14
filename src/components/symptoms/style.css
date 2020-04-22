@@ -8,4 +8,11 @@
 
 h2 {
   margin-bottom: 32px;
+  width: 200px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
