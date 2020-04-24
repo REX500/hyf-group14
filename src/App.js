@@ -8,27 +8,23 @@ import Symptoms from './components/symptoms/symptoms';
 import Temperature from './components/temperature/temperature';
 import Final from './components/final/final';
 
-// material
-import Button from '@material-ui/core/Button';
-
 function App() {
   // states
   // 1. login
   // 2. symptoms
-  // 3.temperature
-  // 4  . final
+  // 3. temperature
+  // 4. final
   const [currentPage, setCurrentPage] = useState('login');
 
   return (
     <div className="app">
       <Header home={currentPage === 'login'} />
-
-      {currentPage === 'symptoms' && (
+      
+      {currentPage === 'login' && (
         <Login onClick={() => setCurrentPage('symptoms')} />
       )}
-      {currentPage === 'login' && (
-        <Symptoms onClick={() =>  setCurrentPage('temperature')}/>
-        // <Test />
+      {currentPage === 'symptoms' && (
+        <Symptoms onClick={() => setCurrentPage('temperature')} />
       )}
       {currentPage === 'temperature' && (
         <Temperature onClick={() => setCurrentPage('final')} />
