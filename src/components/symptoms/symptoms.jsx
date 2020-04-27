@@ -43,9 +43,10 @@ class Symptoms extends Component {
 		const { firstPage } = this.state;
     const { onClick } = this.props;
 
-    if(firstPage) this.handleFirstPageClick();
-    if(this.state.value ==='Ja') onClick();
-
+		if(firstPage) this.handleFirstPageClick();
+		else {
+			this.state.value ==='Ja' && onClick();
+		}
 	}
 
 	render() {
